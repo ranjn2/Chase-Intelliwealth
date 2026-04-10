@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-# Chase-Intelliwealth--Multiagent-Financial-Advisory-System
-Multiagent Financial Advisory System
-=======
 # Chase IntelliWealth
 
 Chase IntelliWealth is a multi-agent AI wealth advisory system built for bank-grade portfolio management. It runs a three-stage agent pipeline that analyzes client portfolios, generates actionable investment recommendations, and delivers them through an interactive web interface or a REST API.
@@ -18,6 +14,7 @@ Follow these steps to run the demo locally.
 
 - **Node.js ≥ 20** — [Download](https://nodejs.org/)
 - **npm** (included with Node.js)
+- **Groq API Key** — Sign up at [console.groq.com](https://console.groq.com) and generate an API key
 
 ### 1. Install Dependencies
 
@@ -26,7 +23,19 @@ cd IntelliWealth
 npm install
 ```
 
-### 2. Start the Server
+### 2. Configure Environment
+
+```bash
+cp .env.example .env
+```
+
+Edit `.env` and add your Groq API key:
+
+```
+INTELLIWEALTH_OPENAI_API_KEY=your-groq-api-key-here
+```
+
+### 3. Start the Server
 
 ```bash
 npm run start:api
@@ -173,6 +182,9 @@ test/
 
 | Variable                                  | Required      | Default                      | Description                      |
 | ----------------------------------------- | ------------- | ---------------------------- | -------------------------------- |
+| `INTELLIWEALTH_OPENAI_API_KEY`            | **Yes**       | —                            | Groq API key                     |
+| `INTELLIWEALTH_OPENAI_BASE_URL`           | No            | `https://api.groq.com/openai/v1` | OpenAI-compatible API base URL |
+| `INTELLIWEALTH_OPENAI_MODEL`              | No            | `openai/gpt-oss-120b`       | Model to use                     |
 | `INTELLIWEALTH_API_HOST`                  | No            | `0.0.0.0`                    | API server bind address          |
 | `INTELLIWEALTH_API_PORT`                  | No            | `8000`                       | API server port                  |
 
@@ -231,4 +243,3 @@ curl -X POST http://localhost:8000/analyze \
 ## Disclaimer
 
 > This is a demonstration system. It is not financial advice. Please consult a qualified financial advisor before making investment decisions.
->>>>>>> 182e4cc (Initial commit)
