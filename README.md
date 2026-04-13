@@ -2,7 +2,7 @@
 
 Chase IntelliWealth is a multi-agent AI wealth advisory system built for bank-grade portfolio management. It runs a three-stage agent pipeline that analyzes client portfolios, generates actionable investment recommendations, and delivers them through an interactive web interface or a REST API.
 
-The web UI features a clean, light-themed interface inspired by JPMorgan Chase's design language — with a conversational advisor experience where each session generates a randomized client profile for demonstration purposes.
+The web UI features a clean, light-themed interface with a conversational advisor experience where each session generates a randomized client profile for demonstration purposes.
 
 ---
 
